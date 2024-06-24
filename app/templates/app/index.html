@@ -1,0 +1,253 @@
+{% extends 'app/layout.html' %}
+{% load static %}
+{% block content %}
+
+<head>
+  <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+      .icon-image {
+          width: 50px;
+          height: 50px;
+      }
+      .icon-text {
+          font-size: 14px;
+          margin-top: 5px;
+      }
+      .list-inline-item {
+          text-align: center;
+          margin-bottom: 20px;
+      }
+      .content-footer-spacing {
+          padding-bottom: 60px;
+      }
+      .card-title {
+          font-weight: bold;
+      }
+      .card-text {
+          font-size: 14px;
+      }
+      .carousel-item img {
+          height: 300px;
+          object-fit: cover;
+          
+      }
+      .room-cards-container .row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    .room-cards-container .col-md-4 {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 1rem;
+    }
+
+    .room-cards-container .card {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+    .room-cards-container .card-body {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+
+
+    header {
+        position: relative;
+        background-color: black;
+        height: 50vh;
+        min-height: 25rem;
+        width: 100%;
+        overflow: hidden;
+      }
+      
+      header video {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        min-width: 100%;
+        min-height: 100%;
+        width: auto;
+        height: auto;
+        z-index: 0;
+        -ms-transform: translateX(-50%) translateY(-50%);
+        -moz-transform: translateX(-50%) translateY(-50%);
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+      }
+      
+      header .container {
+        position: relative;
+        z-index: 2;
+      }
+      
+      header .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        opacity: 0.5;
+        z-index: 1;
+      }
+      
+      /* Media Query for devices withi coarse pointers and no hover functionality */
+      
+      /* This will use a fallback image instead of a video for devices that commonly do not support the HTML5 video element */
+      
+      @media (pointer: coarse) and (hover: none) {
+        header {
+          background: url('https://source.unsplash.com/XT5OInaElMw/1600x900') black no-repeat center center scroll;
+        }
+      
+        header video {
+          display: none;
+        }
+      }
+
+
+
+  </style>
+
+
+ 
+
+</head>
+
+<body>
+
+    <header>
+
+        <!-- This div is  intentionally blank. It creates the transparent black overlay over the video which you can modify in the CSS -->
+        <div class="overlay"></div>
+      
+        <!-- The HTML5 video element that will create the background video on the header -->
+        <video preload="auto" muted playsinline autoplay="autoplay" loop="loop">
+          <source src="\static\media\video\Mount1.mp4" type="video/mp4">
+        </video>
+      
+        <!-- The header content -->
+        <div class="container h-100">
+          <div class="d-flex h-100 text-center align-items-center">
+            <div class="w-100 text-white">
+              <h1 class="display-3">Горная гармония</h1>
+              <p class="lead mb-0">Вдохновение на вершинах</p>
+            </div>
+          </div>
+        </div>
+      </header>
+      
+     
+
+    
+
+
+
+
+
+
+
+
+
+
+      <hr>
+        
+
+        <!-- Информационные карточки -->
+        <div class="ui container">
+            <div class="ui four column grid room-cards-container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card mb-4" > 
+                            <img src="{% static 'media/img/rooms/delux/dx1.jpg' %}" class="card-img-top" alt="Изображение номера">
+                            <div class="card-body">
+                                <h5 class="card-title" >
+                                   <a href="/rooms/" class="link-dark">Номера</a> 
+                                </h5>
+                                <p class="card-text">Номера с панорамными видами и удобствами для повышенного комфорта</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="{% static 'media/img/film_room/f1.jpg' %}" class="card-img-top" alt="Изображение номера">
+                            <div class="card-body">
+                                <h5 class="card-title" >
+                                    <a href="/kino/" >Кинозал</a> 
+                                 </h5>
+                                <p class="card-text">Отличное место для проведения встреч и мероприятий.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="{% static 'media/img/cafe/cafe1.jpg' %}" class="card-img-top" alt="Изображение номера">
+                            <div class="card-body">
+                                <h5 class="card-title">Ресторан</h5>
+                                <p class="card-text">Изысканные блюда и уютная атмосфера ждут вас.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+                            <img src="{% static 'media/img/pool/pool1.webp' %}" class="card-img-top" alt="Изображение номера">
+                            <div class="card-body">
+                                <h5 class="card-title">СПА</h5>
+                                <p class="card-text">Расслабьтесь и наслаждайтесь нашим СПА-центром.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Другие карточки, если нужно -->
+                </div>
+            </div>
+        </div>
+        
+        
+        
+        
+        
+        
+        <!-- Другие возможности -->
+        <div class="row mb-4">
+            <div class="col-md-12">
+                <h2 class="text-center">Другие возможности:</h2>
+            </div>
+        </div>
+
+        <div class="row text-center mb-4">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#333" class="bi bi-p-square-fill" viewBox="0 0 16 16">
+                            <path d="M8.27 8.074c.893 0 1.419-.545 1.419-1.488s-.526-1.482-1.42-1.482H6.778v2.97z"/>
+                            <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm3.5 4.002h2.962C10.045 4.002 11 5.104 11 6.586c0 1.494-.967 2.578-2.55 2.578H6.784V12H5.5z"/>
+                        </svg>
+                        <h5 class="card-title text-center" >
+                            <a href="/parking/">Парковка</a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#333" class="bi bi-alarm-fill" viewBox="0 0 16 16">
+                            <path d="M8 16a7 7 0 1 0 0-14 7 7 0 0 0 0 14zM0 .5a.5.5 0 0 1 .5-.5h2.691c.154.01.298.06.41.152l.917.764-.871.498-.913-.762a.5.5 0 0 1-.14-.138H.5a.5.5 0 0 1-.5-.5zm13.023 0a.5.5 0 0 1 .472-.5h2.49a.5.5 0 0 1 .5.5v.5h-2.49a.5.5 0 0 1-.476-.5v-.5h-2.49a.5.5 0 0 1-.5-.5V.5z"/>
+                            <path d="M8.1 1.04a.5.5 0 0 1 .8 0l.69.867-.88.438-.713-.867zm3.8.51a.5.5 0 0 1 .9 0l.7.866-.87.438-.73-.867z"/>
+                        </svg>
+                        <h5 class="card-title text-center">Детская комната</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+
+   
+</body>
+{% endblock %}

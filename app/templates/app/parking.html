@@ -1,0 +1,45 @@
+{% extends 'app/layout.html' %}
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.min.css' %}">
+    <title>Подземная парковка отеля</title>
+</head>
+<body>
+ 
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="text-center mb-4">Подземная парковка отеля</h2>
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">Информация о подземной парковке</h5>
+                        <p class="card-text">Наш отель предоставляет удобную и безопасную подземную парковку для всех наших гостей. Парковка оборудована современными системами безопасности и видеонаблюдения, что обеспечивает полную сохранность вашего автомобиля.</p>
+                        <p class="card-text">Парковка доступна круглосуточно, и наши сотрудники всегда готовы помочь вам с парковкой автомобиля.</p>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Адрес: ул. Примерная, 123</li>
+                            <li class="list-group-item">Общее количество мест: 100</li>
+                            <li class="list-group-item">Доступные места: 29</li>
+                            <li class="list-group-item">Стоимость: 50 руб/час</li>
+                            <p class="card-text mt-3">Для гостей отеля парковка бесплатная</p>
+                        </ul>
+                        <p class="card-text mt-3">Для получения дополнительной информации или бронирования места на парковке, пожалуйста, свяжитесь с нами по телефону: +7 (123) 456-7890 или по электронной почте: info@example.com.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{% static 'bootstrap/js/jquery.min.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  
+</body>
+</html>
+
+
+{%endblock%}

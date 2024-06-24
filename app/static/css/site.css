@@ -1,0 +1,35 @@
+/* site.css */
+
+/* Стили для заголовка */
+
+h1 {
+    color: #ffffff; /* Цвет текста */
+    font-size: 24px; /* Размер шрифта */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+/* Стили для ссылок в навигационном меню */
+.navbar-nav .nav-link {
+    color: #fff; /* Цвет текста */
+}
+
+/* Стили для активной ссылки в навигационном меню */
+.navbar-nav .nav-item.active .nav-link {
+    font-weight: bold; /* Жирный шрифт */
+}
+
+/* Стили для основного контента */
+.container {
+    margin-top: 20px; /* Отступ сверху */
+}
+
+/* Стили для подвала */
+.footer {
+    background-color: #333; /* Цвет фона */
+    color: #fff; /* Цвет текста */
+    text-align: center; /* Выравнивание по центру */
+    position: absolute; /* Позиционирование */
+    bottom: 0; /* Расположение внизу */
+    width: 100%; /* Ширина */
+}
+

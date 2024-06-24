@@ -1,0 +1,16 @@
+.room-cards-container .card {
+    display: flex;
+    flex: 1;
+    flex-direction: row-reverse;
+}
+
+.card-body {
+    flex-grow: 1;
+}
+
+.card-container {
+    margin-bottom: 40px;
+}
+.room-cards-container .card {
+    background-color: #471919; /* Пример цвета */
+}

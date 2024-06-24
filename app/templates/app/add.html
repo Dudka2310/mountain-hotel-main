@@ -1,0 +1,63 @@
+{% extends 'app/layout.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <h2 class="mt-5 mb-4">Полезные ресурсы</h2>
+            <h4>Достопримечательности:</h4>
+            <ul>
+                <li>Горы: насладитесь прекрасными видами и активным отдыхом в горах рядом с нашим отелем.</li>
+                <li>Озеро: отдохните на берегу красивого озера и насладитесь водными видами спорта.</li>
+                <li>Исторические места: посетите исторические замки, храмы и достопримечательности, расположенные неподалеку.</li>
+            </ul>
+            <h4>Экскурсии и развлечения:</h4>
+            <ul>
+                <li>Пешие прогулки: наслаждайтесь красивой природой во время пеших прогулок по окрестностям.</li>
+                <li>Велосипедные прогулки: исследуйте окрестности на велосипеде по множеству велосипедных маршрутов.</li>
+                <li>Экскурсии: присоединяйтесь к экскурсиям, организованным нашим отелем, чтобы узнать больше о местной культуре и истории.</li>
+            </ul>
+            <p>Свяжитесь с нами, чтобы узнать больше о доступных развлечениях и экскурсиях.</p>
+            <h4>Ссылки на полезные ресурсы</h4>
+            <ul>
+                <li><a href="https://www.velosite.ru/hire/" target="_blank">Велосипедные прогулки: исследуйте окрестности на велосипеде по множеству велосипедных маршрутов</a></li>
+                <li><a href="https://adventure-guide.ru/types/tury-v-gory/" target="_blank">Экскурсии: присоединяйтесь к экскурсиям, организованным нашим отелем, чтобы узнать больше о местной культуре и истории.</a></li>
+            </ul>
+            <div class="row">
+                <div class="col">
+                    <div class="card" style="height: 140px;width: 200px;">
+                        <div class="card-body">
+                            <div style="text-align: center;">
+                                <a href="https://bolshayastrana.com/adygeya/edem-v-gory-ehkskursii-i-priklyucheniya-dlya-vsej-semi-16167" target="_blank"><img src="{% static 'media\img\add\logo-light.20346b1.svg' %}" alt="Logo 1" style="height:65px;"/></a>
+                            </div>
+                            <h5 class="card-title text-center"><a href="https://bolshayastrana.com/adygeya/edem-v-gory-ehkskursii-i-priklyucheniya-dlya-vsej-semi-16167" target="_blank">Экскурсии</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="height: 140px;width: 200px;">
+                        <div class="card-body">
+                            <div style="text-align: center;">
+                                <a href="https://www.velosite.ru/hire/" target="_blank"><img src="{% static 'media\img\add\velosite-logo.svg' %}" alt="Logo 1" style="height:65px;"/></a>
+                            </div>
+                            <h5 class="card-title text-center"><a href="https://www.velosite.ru/hire/" target="_blank">Велосипеды</a></h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card" style="height: 140px;width: 200px;">
+                        <div class="card-body">
+                            <div style="text-align: center;">
+                                <a href="https://kvadprokat.ru/?ysclid=lvqs09ebfj278481716" target="_blank"><img src="{% static 'media\img\add\Ofrd_123-removebg-pr.png' %}" alt="Logo 1" style="height:65px;"/></a>
+                            </div>
+                            <h5 class="card-title text-center"><a href="https://kvadprokat.ru/?ysclid=lvqs09ebfj278481716" target="_blank">Квадроциклы</a></h5>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

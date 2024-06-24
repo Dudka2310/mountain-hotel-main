@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% extends 'app/layout.html' %}
+{% load static %}
+{% block content %}
+
+<div class="container mt-5">
+    <h2 class="text-center mb-4">{{ title }}</h2>
+    <hr class="mb-5"/>
+
+    <div class="mb-5">
+        <h3 class="mb-3">Видео материалы</h3>
+        <div class="mb-4">
+            <video src="{% static 'media/video/Mount.mp4' %}" controls="controls" class="w-100 rounded shadow-sm"></video>
+        </div>
+        <div class="mb-4">
+            <video src="{% static 'media/video/Mount2.mp4' %}" controls="controls" class="w-100 rounded shadow-sm"></video>
+        </div>
+    </div>
+
+    <div class="mb-5">
+        <h3 class="mb-3">Аудио материалы</h3>
+        <figure class="mb-4">
+            <figcaption>Тут находится 1 звуковой файл:</figcaption>
+            <audio controls src="{% static 'media/music/kamerton.mp3' %}" type="audio/mpeg" class="w-100"></audio>
+            <a href="{% static 'media/music/kamerton.mp3' %}" class="btn btn-outline-primary mt-2">Загрузить</a>
+        </figure>
+        <figure class="mb-4">
+            <figcaption>Тут находится 2 звуковой файл:</figcaption>
+            <audio controls src="{% static 'media/music/kamerton2.mp3' %}" type="audio/mpeg" class="w-100"></audio>
+            <a href="{% static 'media/music/kamerton2.mp3' %}" class="btn btn-outline-primary mt-2">Загрузить</a>
+        </figure>
+    </div>
+</div>
+
+{% endblock %}

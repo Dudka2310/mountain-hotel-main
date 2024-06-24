@@ -1,0 +1,78 @@
+{% if user.is_authenticated %}
+<form id="logoutForm" method="post" action="{% url 'logout' %}">
+    {% csrf_token %}
+
+
+
+<!-- Добавьте эти строки в соответствующее место вашей шаблонной страницы -->
+
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle" href="javascript:void(0);"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        Привет, {{ user.first_name }}!
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        {% if user.is_active %}
+            <a class="dropdown-item" href="/newpost/">Добавить статью</a>
+            {% if user.is_staff %}
+            <a class="dropdown-item" href="/admin/">Админ Панель</a>
+            {% endif %}
+            
+        {% endif %}
+        <div class="dropdown-divider"></div>
+        <div class="d-flex justify-content-center">
+            <button type="button" class="btn btn-outline-danger" onclick="document.getElementById('logoutForm').submit()">
+             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+            <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"></path>
+            <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"></path>
+        </svg>
+        Выйти
+            </button>
+</div>
+    </div>
+</li>
+
+
+
+<!-- Подключение Bootstrap JS (если еще не подключено) -->
+
+    <!-- <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Dropdown
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="/admin/">Панель администрирования</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Something else here</a>
+        </div>
+      </li>
+      
+    <ul class="navbar-nav top-menu">
+        <li class="nav-item navbar-text colorway"><strong>Привет, {{ user.username }}!</strong></li>
+        <li class="nav-item">
+
+            <button type="button" class="btn btn-outline-danger" onclick="document.getElementById('logoutForm').submit()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0z"></path>
+                    <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708z"></path>
+                </svg>
+                Выйти
+            </button>
+
+
+        </li>
+    </ul> -->
+
+</form>
+
+{% else %}
+
+ <li class="nav-item">
+ <a class="nav-link" href="/login/">Войти</a>
+</li>
+ <li class="nav-item">
+ <a class="nav-link" href="/registration/">Регистрация</a>
+</li>
+
+
+{% endif %}

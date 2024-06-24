@@ -1,0 +1,37 @@
+{
+  "name": "mountain-hotel",
+  "appPanels": {
+    "suite": {
+      "panes": [
+        "groups"
+      ]
+    },
+    "settings": {
+      "panes": []
+    }
+  },
+  "groups": {
+    "snippets": {
+      "key": "snippets",
+      "value": true,
+      "tests": {
+        "2ajlxhvmvgo": {
+          "key": "2ajlxhvmvgo",
+          "value": true
+        }
+      }
+    }
+  },
+  "savedAt": 1718562353,
+  "modified": false,
+  "lastOpenSuite": ".snippets.json",
+  "variables": {},
+  "targets": {},
+  "environments": [
+    "test",
+    "stage",
+    "production"
+  ],
+  "projectDirectory": "/Users/aleksejdmitriev/Library/CloudStorage/SynologyDrive-Drive/PGU/PGU/mispis/lastlast/mountain-hotel/mountain-hotel",
+  "puppetry": "3.2.6"
+}

@@ -1,0 +1,44 @@
+{% extends 'app/layout.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row justify-content-left">
+        <div class="col-lg-8">
+            <h2>{{ title }}</h2>
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="form-group">
+                    {{ blogform.as_p }}
+                </div>
+                <button type="submit" class="btn btn-success">Сохранить статью</button>
+            </form>
+            {{ blogform.media }}
+        </div>
+    </div>
+    <br>
+</div>
+
+<style>
+    .container {
+        text-align: left; /* Центрирует содержимое */
+    }
+    .form-group {
+        width: 100%; /* Задает ширину блока ввода */
+        margin-bottom: 20px; /* Дополнительный отступ снизу */
+    }
+    input[type="text"], textarea {
+        width: 100%; /* Задает ширину блока ввода */
+        height: 40px; /* Фиксированная высота блока ввода */
+        resize: none; /* Запрет на изменение размера */
+    }
+    .btn {
+        width: 200px; /* Фиксированная ширина кнопки */
+        margin-top: 10px; /* Дополнительный отступ сверху */
+    }
+</style>
+
+<script src="https://cdn.tiny.cloud/1/efifjg8g4lwwpjfbmge821yls3nmyibv3u883qvpm7pjojal/tinymce/7/tinymce.min.js" referrerpolicy="origin"></script>
+
+
+{% endblock %}

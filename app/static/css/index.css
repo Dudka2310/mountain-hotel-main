@@ -1,0 +1,25 @@
+.carousel-control-color {
+    color: #fff;
+}
+
+.carousel-control-width {
+    width: 15%;
+}
+
+.carousel-control-opacity {
+    opacity: .5;
+}
+
+.carousel-control-hover-opacity {
+    opacity: .9;
+}
+
+.carousel-control-transition {
+    transition: opacity .15s ease;
+}
+
+.carousel-indicator-width {
+    width: 30px;
+}
+
+/* Продолжите также для остальных переменных */

@@ -1,0 +1,55 @@
+{
+  "title": null,
+  "timeout": 50000,
+  "snippets": true,
+  "description": null,
+  "savedAt": 1718562352,
+  "loadedAt": 1718562323,
+  "modified": false,
+  "filename": ".snippets.json",
+  "targets": {},
+  "groups": {
+    "snippets": {
+      "editing": false,
+      "id": "snippets",
+      "key": "snippets",
+      "title": "Snippets",
+      "tests": {
+        "2ajlxhvmvgo": {
+          "title": "asdasdasd",
+          "id": "2ajlxhvmvgo",
+          "editing": false,
+          "groupId": "snippets",
+          "key": "2ajlxhvmvgo",
+          "commands": {
+            "2ajlxhvn86j": {
+              "editing": false,
+              "id": "2ajlxhvn86j",
+              "key": "2ajlxhvn86j",
+              "target": "page",
+              "method": "scroll",
+              "params": {
+                "x": 0,
+                "y": 0
+              },
+              "disabled": false,
+              "failure": "",
+              "variables": {},
+              "expanded": false,
+              "refName": "",
+              "ref": "",
+              "isRef": false,
+              "groupId": "snippets",
+              "testId": "2ajlxhvmvgo",
+              "waitForTarget": false
+            }
+          }
+        }
+      },
+      "disabled": false,
+      "expanded": false,
+      "adding": false
+    }
+  },
+  "puppetry": "3.2.6"
+}
